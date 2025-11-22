@@ -1,0 +1,15 @@
+# Bytecode and cache files
+__pycache__/
+*.py[cod]
+
+# Test/env-specific caches
+.pytest_cache/
+
+# Virtual environments
+env/
+venv/
+
+# Distribution/build artifacts
+dist/
+build/
+*.egg-info/
