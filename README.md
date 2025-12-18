@@ -44,3 +44,24 @@ HELLO_WORLD_LOG_FILE=/tmp/hello-world.log .venv/bin/python src/main.py
 ```bash
 PYTHON=.venv/bin/python make test
 ```
+
+## Docker (local)
+
+Build the image:
+
+```bash
+docker build -t hello-world .
+```
+
+Run it (writes logs to `./logs/hello-world.log` on your machine):
+
+```bash
+mkdir -p logs
+docker run --rm -v "$PWD/logs:/logs" hello-world
+```
+
+Pass arguments to the CLI:
+
+```bash
+docker run --rm -v "$PWD/logs:/logs" hello-world --name Alice
+```
