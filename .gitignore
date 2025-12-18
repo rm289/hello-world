@@ -8,8 +8,12 @@ __pycache__/
 # Virtual environments
 env/
 venv/
+.venv/
 
 # Distribution/build artifacts
 dist/
 build/
 *.egg-info/
+
+# Logs
+*.log

@@ -15,4 +15,4 @@ lint:
 	$(PYTHON) -m ruff check src tests
 
 format:
-	$(PYTHON) -m black src tests
+	@for f in $$(git ls-files '*.py'); do $(PYTHON) -m black $$f; done
